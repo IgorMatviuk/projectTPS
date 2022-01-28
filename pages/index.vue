@@ -1892,7 +1892,7 @@
     </no-ssr>
     <!-- -->
 
-    
+    <!--
       <div class="other" id="other">
         <h1>Other solutions</h1>
         <div class="other__check">
@@ -2896,9 +2896,12 @@
   </carousel>
 </div>
 
-<!-- two -->
+-->
 
+<!-- two -->
+      
     <!-- -->
+    
     <div class="button-catalog">
       <a href="#" download="cardSlider.png">
         <div class="what-is__text__button">
