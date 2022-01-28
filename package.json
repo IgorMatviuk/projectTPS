@@ -1,0 +1,44 @@
+{
+  "name": "tavria-prom-service",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.19.0",
+    "cookie": "^0.3.1",
+    "core-js": "^3.15.1",
+    "express": "^4.17.1",
+    "hooper": "^0.3.4",
+    "js-cookie": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "magic-vue-input": "^1.1.0",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.15",
+    "multer": "^1.4.4",
+    "nuxt": "^2.15.7",
+    "passport": "^0.5.0",
+    "passport-jwt": "^4.0.0",
+    "swiper": "^5.4.5",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-burger-menu": "^2.0.5",
+    "vue-carousel": "^0.18.0",
+    "vue-float-label": "^1.6.1",
+    "vue-owl-carousel": "^2.0.3",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-tiny-slider": "^0.1.39"
+  },
+  "devDependencies": {
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.44.0",
+    "sass-loader": "^10.2.0"
+  }
+}

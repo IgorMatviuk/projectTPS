@@ -1,0 +1,38 @@
+
+@font-face { 
+    font-family: "StolzlBold";
+    src: url("../fonts/Stolzl-Bold.ttf");
+
+}
+
+@font-face { 
+    font-family: "StolzlThin";
+    src: url("../fonts//Stolzl-Thin.ttf");
+
+}
+
+@font-face { 
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-VariableFont_wght.ttf");
+
+}
+
+@font-face { 
+    font-family: "Stolzl";
+    src: url("../fonts//Stolzl-Medium.ttf");
+}
+
+@font-face { 
+    font-family: "StolzlBook";
+    src: url("../fonts//Stolzl-Book.ttf");
+}
+
+@font-face { 
+    font-family: "StolzlRegular";
+    src: url("../fonts//Stolzl-Regular.ttf");
+}
+
+@font-face { 
+    font-family: "StolzlLight";
+    src: url("../fonts//Stolzl-Light.ttf");
+}
