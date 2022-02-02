@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-            <div class="over-container" v-if="IsPopupFormCallShowModal">
+    <div class="over-container" v-if="IsPopupFormCallShowModal">
       <form action="https://formspree.io/f/xqknedbo" method="post">
         <div class="req-modal">
           <div class="req-modal__header">
@@ -367,14 +367,26 @@ export default {
   }
 }
 
+@media (max-width: 684px) {
+  .header {
+    height: 50px;
+    &__container {
+      margin: 25px 10px 30px 15px;
+    }
+    &__logo {
+      width: 100px;
+      height: 20px;
+    }
+  }
+  .header-mob-btn {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 @media (max-width: 576px) {
   .popup-menu {
     width: 100%;
-  }
-}
-@media (max-width: 540px) {
-  .header__container {
-    margin: 30px 20px 30px 20px;
   }
 }
 

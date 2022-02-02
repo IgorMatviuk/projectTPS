@@ -374,6 +374,7 @@
         <div class="math-modal__body">
           <div class="math-modal__slider">
             <no-ssr>
+              <div class="math-modal__slider-main">
               <vue-tiny-slider v-bind="tinySliderOptions">
                 <div class="math-modal__slider__slide">
                   <img src="../assets/img/title_m.png" alt="" />
@@ -385,18 +386,19 @@
                   <img src="../assets/img/title_m.png" alt="" />
                 </div>
               </vue-tiny-slider>
+              </div>
               <div class="customize-tools">
-                <ul class="thumbnails" id="customize-thumbnails">
-                  <li>
+                <div class="thumbnails" id="customize-thumbnails">
+                  <div class="customize-tools-block">
                     <img src="../assets/img/title_m.png" alt="" />
-                  </li>
-                  <li>
+                  </div>
+                  <div class="customize-tools-block">
                     <img src="../assets/img/title_m.png" alt="" />
-                  </li>
-                  <li>
+                  </div>
+                  <div class="customize-tools-block">
                     <img src="../assets/img/title_m.png" alt="" />
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </no-ssr>
           </div>
@@ -496,7 +498,7 @@
             </div>
             <div class="math-modal__title math-modal__container__title-three">
               <h3>03</h3>
-              <p>MAIN COMPONENTS:</p>
+              <p>MAIN COMPONENTS</p>
             </div>
             <div class="math-modal__table-c math-modal__container__table-one">
               <table>
@@ -798,6 +800,7 @@
             </div>
           </div>
         </div>
+        <div class="what-is__text__button-toggle">
         <a href="#" download="cardSlider.png">
           <div class="what-is__text__button">
             <img src="../assets/img/downloads.svg" alt="" />
@@ -805,12 +808,13 @@
           </div>
         </a>
       </div>
+      </div>
     </div>
 
     <div class="what-is__text__slider-title">
       <p>Our B2B clients:</p>
     </div>
-    <ClientsSlider></ClientsSlider>
+    <ClientsSlider id="CLIENTS"></ClientsSlider>
     <no-ssr>
       <div class="other" id="other">
         <h1>Other solutions</h1>
@@ -826,12 +830,7 @@
           <p>Industrial production lines</p>
         </div>
       </div>
-      <div class="cards__popular">
-        <div class="cards__popular__block">
-                  <p>POPULAR</p>
-        </div>
-      </div>
-      <div v-if="!IsSliderToggle">
+      <div v-if="!IsSliderToggle" class="slide-conainer">
         <div class="cards">
           <div class="cards__navs">
             <div class="cards__navs__nav-prev">
@@ -901,6 +900,9 @@
             -->
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -952,6 +954,63 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                <div class="cards__popular">
+                  <p>POPULAR</p>
+                </div>
+                <div class="cards__card cards__card-active">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/2.png" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1003,6 +1062,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1054,6 +1116,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1105,6 +1170,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1156,6 +1224,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1207,6 +1278,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1258,57 +1332,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
-                <div class="cards__card">
-                  <div class="cards__card-container">
-                    <div class="cards__card__title">
-                      <p>
-                        Line for the production of ketchup, sauces and tomato
-                        paste
-                      </p>
-                    </div>
-                    <div class="cards__card__img">
-                      <img src="../assets/img/2.png" alt="" />
-                    </div>
-                    <div class="cards__card__price-block">
-                      <img src="../assets/img/botl-ico.svg" alt="" />
-                      <p>1000-5000</p>
-                      <strong>PER DAY</strong>
-                    </div>
-                    <div class="cards__card__btn">
-                      <p>LEARN MORE</p>
-                      <p>></p>
-                    </div>
-                    <div class="cards__card__description">
-                      <p>
-                        For the preparation of ketchup and sauces, homogeneous
-                        and with inclusions, their packing in bottles and jars
-                        (glass, plastic) or packing in tubes of the "CHAB" type,
-                        labeling and group packaging.
-                      </p>
-                      <div class="cards__card__description__line"></div>
-                    </div>
-                  </div>
+                                <div class="cards__popular-none">
+                  
                 </div>
-                <div class="cards__card__hover">
-                  <div class="cards__card__hover-container">
-                    <p>
-                      Line for the production of ketchup, sauces and tomato
-                      paste
-                    </p>
-                    <p>
-                      Line for the production of ketchup, sauces and tomato
-                      paste
-                    </p>
-                    <p>
-                      Line for the production of ketchup, sauces and tomato
-                      paste
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="card-and-hover">
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1361,7 +1387,7 @@
           </swiper>
         </div>
       </div>
-      <div v-if="IsSliderToggle">
+      <div v-if="IsSliderToggle" class="slide-conainer">
         <div class="cards">
           <div class="cards__navs">
             <div class="cards__navs__nav-prev">
@@ -1378,6 +1404,9 @@
           <swiper>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1429,6 +1458,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1480,6 +1512,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1531,6 +1566,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1582,6 +1620,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1633,6 +1674,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1684,6 +1728,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1735,6 +1782,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1786,6 +1836,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1837,6 +1890,9 @@
             </swiper-slide>
             <swiper-slide>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1890,6 +1946,991 @@
         </div>
       </div>
     </no-ssr>
+    <!--
+            <no-ssr>
+        <VueSlickCarousel :arrows="true" :dots="true">
+      <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+            <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+            <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+            <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+            <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+            <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+            <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+            <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </VueSlickCarousel>
+    </no-ssr>
+    -->
+    <!--
+
+    <carousel :autoplay="true" :nav="false">
+
+                  <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+                  <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+                  <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+                  <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+                  <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+                  <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+                  <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+                  <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+                  <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+                  <div>
+                      <div class="card-and-hover">
+                                        <div class="cards__popular-none">
+                  
+                </div>
+                <div class="cards__card">
+                  <div class="cards__card-container">
+                    <div class="cards__card__title">
+                      <p>
+                        Line for the production of ketchup, sauces and tomato
+                        paste
+                      </p>
+                    </div>
+                    <div class="cards__card__img">
+                      <img src="../assets/img/card-prod.svg" alt="" />
+                    </div>
+                    <div class="cards__card__price-block">
+                      <img src="../assets/img/botl-ico.svg" alt="" />
+                      <p>1000-5000</p>
+                      <strong>PER DAY</strong>
+                    </div>
+                    <div class="cards__card__btn">
+                      <p>LEARN MORE</p>
+                      <p>></p>
+                    </div>
+                    <div class="cards__card__description">
+                      <p>
+                        For the preparation of ketchup and sauces, homogeneous
+                        and with inclusions, their packing in bottles and jars
+                        (glass, plastic) or packing in tubes of the "CHAB" type,
+                        labeling and group packaging.
+                      </p>
+                      <div class="cards__card__description__line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards__card__hover">
+                  <div class="cards__card__hover-container">
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                    <p>
+                      Line for the production of ketchup, sauces and tomato
+                      paste
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </div>
+
+</carousel>
+-->
     <!-- -->
 
     <!--
@@ -1915,6 +2956,9 @@
  
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -1966,6 +3010,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2017,6 +3064,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2068,6 +3118,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2119,6 +3172,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2170,6 +3226,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2221,6 +3280,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2272,6 +3334,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2323,6 +3388,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2385,6 +3453,9 @@
   <carousel v-if="IsSliderToggle">
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2436,6 +3507,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2487,6 +3561,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2538,6 +3615,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2589,6 +3669,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2640,6 +3723,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2691,6 +3777,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2742,6 +3831,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2793,6 +3885,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2844,6 +3939,9 @@
             </div>
             <div>
               <div class="card-and-hover">
+                                <div class="cards__popular-none">
+                  
+                </div>
                 <div class="cards__card">
                   <div class="cards__card-container">
                     <div class="cards__card__title">
@@ -2898,10 +3996,10 @@
 
 -->
 
-<!-- two -->
-      
+    <!-- two -->
+
     <!-- -->
-    
+
     <div class="button-catalog">
       <a href="#" download="cardSlider.png">
         <div class="what-is__text__button">
@@ -3379,6 +4477,4 @@ export default {
 .vfl-label-on-focus {
   color: #ffffff;
 }
-
-
 </style>

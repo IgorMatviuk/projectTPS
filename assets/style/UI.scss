@@ -51,6 +51,10 @@ body {
   }
 }
 
+.what-is__text__button-toggle{
+  display: flex;
+}
+
 .container-global {
   margin: 0;
   padding: 0;
@@ -1119,42 +1123,60 @@ button.slick-prev:hover {
   }
 }
 
+/*
+.swiper-wrapper{
+  margin: 0px 0px 0px 18px;
+}
+
+.swiper-slide{
+  margin: 0px 0px 0px -5px;
+}
+
+*/
+
+.swiper-container {
+  padding: 0px 0px 0px 3px;
+}
+
 
 .cards {
   display: flex;
-  width: auto;
+  width: 100%;
+  position: absolute;
   margin: 0px 12px 0px 12px;
 
   &__popular {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin: 41px 0px 0px 0px;
+    width: 360px;
+    height: 20px;
+    background: #FFFFFF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    z-index: 9;
+    margin: 0px 0px 0px 0px;
 
-    &__block {
+    p {
+      font-family: Stolzl;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      color: #2B2A29;
       display: flex;
-      justify-content: center;
-      text-align: center;
-      width: 360px;
-      height: 20px;
-      background: #FFFFFF;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      position: relative;
-      z-index: 9;
-
-      p {
-        font-family: Stolzl;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 14px;
-        color: #2B2A29;
-        display: flex;
-        margin: 5px 0px 0px 0px;
-      }
+      margin: 3px 0px 0px 0px;
     }
+  }
+
+  &__popular-none{
+    display: flex;
+    width: 360px;
+    height: 20px;
+    background: #2B2A29;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
   }
 
   &__navs {
@@ -1175,14 +1197,25 @@ button.slick-prev:hover {
 
   &__card {
     display: flex;
+    flex-direction: column;
     width: 360px;
     height: auto;
     background: #3E3E3E;
+
     border-radius: 10px;
     color: #FFFFFF;
     font-display: block;
     font-family: Stolzl;
     cursor: pointer;
+    margin: 0px 0px 0px 0px;
+
+    &__hover-container {
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 20px;
+    }
 
     &__hover {
       display: none;
@@ -1195,6 +1228,7 @@ button.slick-prev:hover {
       font-family: Manrope;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
+
       &-container {
         margin: 0px 27px 10px 27px;
       }
@@ -1203,7 +1237,7 @@ button.slick-prev:hover {
     &-container {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: auto;
       height: auto;
       margin: 10px 27px 10px 27px;
 
@@ -1226,7 +1260,7 @@ button.slick-prev:hover {
     &__img {
       display: flex;
       width: 300px;
-      height: auto;
+      height: 200px;
       margin: 15px 0px 0px 4px;
       justify-content: center;
     }
@@ -1314,19 +1348,23 @@ button.slick-prev:hover {
   }
 }
 
-.card-and-hover {
-  display: flex;
-  flex-direction: column;
-}
-
 .cards__card:hover~.cards__card__hover {
   display: flex;
 }
 
+.slide-conainer {
+  width: 100%;
+  position: relative;
+  height: 550px;
+  margin: 60px 0px 30px 0px;
+}
+
+
+
 .button-catalog {
   display: flex;
   justify-content: center;
-  margin: -18px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
   color: #FFFFFF;
 
   a {
@@ -1354,7 +1392,7 @@ button.slick-prev:hover {
   height: 200px;
   background: #3E3E3E;
   border-radius: 10px;
-  margin: 100px 0px 0px 7px;
+  margin: 82px 0px 0px 7px;
   background-image: url(../img/Slice1.svg);
   background-repeat: no-repeat;
   background-position: right;
@@ -1690,12 +1728,7 @@ button.slick-prev:hover {
 }
 
 .customize-tools {
-  margin: -16px 0px 0px -40px;
-}
-
-.customize-tools ul {
-  display: flex;
-  list-style-type: none;
+  margin: 0px 0px 0px 0px;
 }
 
 .tns-outer [aria-controls] {
@@ -1713,10 +1746,15 @@ button.slick-prev:hover {
 
 .tns-outer [aria-controls],
 .tns-outer [data-action] {
-  margin: 0px 0px 0px 300px;
+  padding: 0px 0px 0px 310px;
 }
 
-.customize-tools ul li {
+.thumbnails{
+  display: flex;
+  flex-direction: row;
+}
+
+.customize-tools-block {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1725,9 +1763,10 @@ button.slick-prev:hover {
   border: 1px solid #3E3E3E;
 }
 
-.customize-tools ul li img {
+.customize-tools-block img {
   width: 72px;
   height: 90px;
+  pointer-events: none;
 }
 
 .form-input {
@@ -2020,7 +2059,7 @@ button.slick-prev:hover {
 .tns-controls {
   z-index: 99999;
   position: absolute;
-  margin: 400px 0px 0px -295px;
+  margin: 400px 0px 0px -303px;
   display: flex;
 }
 
@@ -2049,7 +2088,6 @@ button.slick-prev:hover {
     &__slide {
       width: 348px;
       height: 355px;
-      border: 1px solid #3E3E3E;
       justify-content: center;
       align-items: center;
       display: flex;
@@ -2246,6 +2284,10 @@ button.slick-prev:hover {
   }
 }
 
+.math-modal__slider-main{
+  border: 1px solid #3E3E3E;
+}
+
 .table-left {
   min-width: 153px;
   border-bottom: 0.5px solid #E2E2E2;
@@ -2353,7 +2395,7 @@ button.slick-prev:hover {
   }
 
   .prod-line {
-    margin: 100px 50px 0px 50px;
+    margin: 50px 50px 0px 50px;
     background-image: none;
     height: auto;
     width: auto;
@@ -2440,7 +2482,7 @@ button.slick-prev:hover {
     height: auto;
 
     &__header {
-      width: auto;
+      width: 100%;
       margin: 0px 100px 0px 100px;
     }
 
@@ -2573,10 +2615,32 @@ button.slick-prev:hover {
 }
 
 @media (max-width: 1110px) {
+
+  .slide-conainer{
+    height: 450px;
+  }
+
   .cards {
+    &__popular {
+      width: 290px;
+    }
+
+    &__popular-none {
+      width: 290px;
+    }
+
     &__card {
       width: 290px;
       height: 468.03px;
+
+      &__hover-container {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      &__hover {
+        width: 290px;
+      }
 
       &__btn {
         width: 100%;
@@ -2604,8 +2668,12 @@ button.slick-prev:hover {
 
       &__img {
         width: 100%;
-        height: 89.21px;
+        height: 150px;
         margin: 15px 0px 0px 0px;
+
+        img {
+          width: auto;
+        }
       }
     }
 
@@ -2768,8 +2836,22 @@ button.slick-prev:hover {
 
 @media (max-width: 684px) {
 
-  .cliedderr {
-    margin: 30px 3% 0px 4%;
+  .cards{
+    position: relative;
+    &__card{
+      &__hover{
+        display: flex;
+      }
+    }
+  }
+
+  .container{
+    margin: 0px 0px 0px 0px;
+  }
+
+  .slide-conainer{
+    height: auto;
+    margin: 0px 0px 0px 0px;
   }
 
   .clients__block {
@@ -2817,11 +2899,11 @@ button.slick-prev:hover {
   }
 
   .cards {
-    margin: 20px 0px 0px 12px;
+    margin: 0px 0px 0px 12px;
   }
 
   .other {
-    margin: 0px 0px 0px 0px;
+    margin: 36px 0px 0px 0px;
 
     h1 {
       font-size: 24px;
@@ -2834,6 +2916,8 @@ button.slick-prev:hover {
   }
 
   .prod-line {
+    margin: 0px 20px 0px 30px;
+
     &__text {
       align-items: flex-start;
       margin: 28px 25px 20px 25px;
@@ -2868,7 +2952,7 @@ button.slick-prev:hover {
   }
 
   .contact-form {
-    margin: 100px 15px 50px 15px;
+    margin: 53px 15px 23px 15px;
 
     &__map {
       width: 251px;
@@ -2933,6 +3017,27 @@ button.slick-prev:hover {
   .main-section {
     margin: 30px 0px 0px 0px;
 
+    &__title-block {
+      margin: -21px 0px 0px 60px; 
+      &__back{
+        height: 38px;
+        width: 70%;
+        &__fill{
+          height: 33px;
+        }
+      }
+      &__black{
+        height: 38px;
+        margin: 34px 68px 0px 0px;
+        p{
+          font-size: 14px;
+line-height: 17px;
+margin: 0px 30px 0px 30px;
+        }
+      }
+      
+    }
+
     &__header {
       margin: 0px 15px 0px 15px;
       align-items: center;
@@ -2941,7 +3046,9 @@ button.slick-prev:hover {
 
     &__text {
       font-size: 18px;
-      width: 100%;
+      width: auto;
+      margin: 20px 40px 0px 0px;
+      line-height: 23px;
     }
 
     &__red-block {
@@ -3037,6 +3144,10 @@ button.slick-prev:hover {
       align-items: center;
       margin: 7px 0px 0px 0px;
 
+      &__show p{
+        margin: 0px 0px 0px 15px;
+      }
+
       h1 {
         font-size: 24px;
         line-height: 29px;
@@ -3055,29 +3166,32 @@ button.slick-prev:hover {
     margin: 95px 20px 50px 20px;
 
     &__blocks {
-      justify-content: normal;
-      margin: 40px 22px 0px 22px;
+      justify-content: space-between;
+      margin: 8px 22px 18px 22px;
 
       &__item {
         width: 140px;
         height: auto;
+        margin: 0px 0px 13px 0px;
 
         p {
           font-size: 12px;
           line-height: 14px;
           width: 100px;
+          margin: 10px 0px 0px 0px;
         }
       }
 
       &__show {
-        margin: 22px 0px 0px 0px;
-        justify-content: normal;
+        margin: 0px 0px 0px 0px;
+        justify-content: space-between;
       }
     }
   }
 
   .what-is {
     &__text {
+      margin: 0px 0px 0px 30px;
       &__slider-title {
         font-size: 24px;
         line-height: 29px;
@@ -3089,12 +3203,11 @@ button.slick-prev:hover {
         margin: -10px 0px 0px 0px;
       }
 
-      &__button {
-        display: none;
-      }
-
       &__logo {
         margin: 38px 0px 0px -30px;
+        p {
+          margin: 17px 0px 21px 5px;
+        }
       }
 
       &__blocks {
@@ -3102,14 +3215,15 @@ button.slick-prev:hover {
           margin: 5px 0px -15px 0px;
           width: 100%;
           justify-content: space-between;
-
+    align-items: flex-start;
           &__num {
             font-size: 24px;
             line-height: 29px;
           }
 
           &__text {
-            margin: 0px 20px 0px 15px;
+            margin: 13px 0px 0px 5px;
+            width: 230px;
 
             p {
               font-size: 12px;
@@ -3125,7 +3239,7 @@ button.slick-prev:hover {
         h2 {
           font-size: 18px;
           line-height: 22px;
-          margin: 24px 0px 0px 0px;
+          margin: 24px 0px 0px 5px;
         }
       }
     }
@@ -3134,14 +3248,46 @@ button.slick-prev:hover {
   .questions-title {
     font-size: 18px;
     line-height: 22px;
+    margin: 28px 0px 0px 0px;
+    p{
+      margin: 0px 0px 0px 0px;
+    }
   }
 
   .questions {
-    margin: 13px 15px 0px 15px;
+    margin: 15px 15px 0px 11px;
   }
+
+  .questions__row details {
+    height: 35px;
+    min-height: 35px;
+  }
+
+  .questions__row details summary {
+    height: 35px;
+}
 
   .questions__row details summary:after {
     margin: 0px 10px 0px 0px;
+  }
+
+  .cliedderr{
+    margin: 12px 3% 0px 4%;
+  }
+
+  .popup-overlay-header{
+    margin: 50px 0px 0px 0px;
+  }
+
+  .button-catalog {
+    margin: -18px 0px 0px 0px;
+  }
+
+  .prod-line {
+    margin: 51px 20px 0px 30px;
+  }
+  .what-is__text__button-toggle{
+    display: none;
   }
 }
 
@@ -3149,4 +3295,12 @@ button.slick-prev:hover {
   .features__blocks__item {
     width: 100px;
   }
+}
+
+.cards__card-active{
+  border: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
