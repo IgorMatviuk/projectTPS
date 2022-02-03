@@ -35,7 +35,8 @@
     "vue-float-label": "^1.6.1",
     "vue-owl-carousel": "^2.0.3",
     "vue-slick-carousel": "^1.0.6",
-    "vue-tiny-slider": "^0.1.39"
+    "vue-tiny-slider": "^0.1.39",
+    "webp-converter": "^2.3.3"
   },
   "devDependencies": {
     "pug": "^3.0.2",
