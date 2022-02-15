@@ -2,6 +2,9 @@ export default {
   server: {
     host: '0.0.0.0'
   },
+  build: {
+        publicPath: '/nuxt/'
+    },
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -71,8 +74,7 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  },
+
 
   serverMiddleware: {
     '/back': '~/back'
